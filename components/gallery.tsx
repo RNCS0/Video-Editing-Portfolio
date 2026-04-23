@@ -1,32 +1,41 @@
-import { VideoCard } from "./video-card"
 import { YouTubeEmbed } from "./youtube-embed"
+import { YouTubeShortsEmbed } from "./youtube-shorts-embed"
 
 const shortFormVideos = [
   {
-    title: "Brand Reveal",
-    category: "Social Media",
-    // To add your own videos, place them in /public/videos/ folder
-    // and reference them as "/videos/your-video.mp4"
-    videoSrc: "",
-    thumbnail: "https://images.unsplash.com/photo-1536240478700-b869070f9279?w=400&h=711&fit=crop",
+    title: "Talking Head 1",
+    category: "Talking Head",
+    youtubeId: "8SixPnE0seo",
   },
   {
-    title: "Product Launch",
-    category: "Commercial",
-    videoSrc: "",
-    thumbnail: "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=400&h=711&fit=crop",
+    title: "Talking Head 2",
+    category: "Talking Head",
+    youtubeId: "_Ron5WEIkGU",
   },
   {
-    title: "Behind the Scenes",
-    category: "Lifestyle",
-    videoSrc: "",
-    thumbnail: "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=400&h=711&fit=crop",
+    title: "B-Rolls",
+    category: "B-Roll",
+    youtubeId: "k3cn5vg1-Tg",
   },
   {
-    title: "Street Style",
-    category: "Fashion",
-    videoSrc: "",
-    thumbnail: "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=400&h=711&fit=crop",
+    title: "Typography",
+    category: "Typography",
+    youtubeId: "zxWYRP9F4us",
+  },
+  {
+    title: "Real Estate",
+    category: "Real Estate",
+    youtubeId: "FbutHRqyt9c",
+  },
+  {
+    title: "Ad Video 1",
+    category: "Advertisement",
+    youtubeId: "KJ3HFIaKTDM",
+  },
+  {
+    title: "Ad Video 2",
+    category: "Advertisement",
+    youtubeId: "UiZPed06KRg",
   },
 ]
 
@@ -55,15 +64,13 @@ export function Gallery() {
               <p className="mt-2 text-muted-foreground">Vertical content for social platforms</p>
             </div>
           </div>
-          <div className="grid grid-cols-2 gap-4 sm:grid-cols-4 md:gap-6">
+          <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4 md:gap-6">
             {shortFormVideos.map((video) => (
-              <VideoCard
-                key={video.title}
+              <YouTubeShortsEmbed
+                key={video.youtubeId}
+                videoId={video.youtubeId}
                 title={video.title}
                 category={video.category}
-                thumbnail={video.thumbnail}
-                videoSrc={video.videoSrc}
-                aspectRatio="portrait"
               />
             ))}
           </div>
