@@ -14,8 +14,13 @@ const shortFormVideos = [
   },
   {
     title: "B-Rolls",
-    category: "B-Roll",
+    category: "Lifestyle",
     youtubeId: "k3cn5vg1-Tg",
+  },
+  {
+    title: "Music Trailer",
+    category: "Lifestyle",
+    youtubeId: "OXA5cxcfxUA",
   },
   {
     title: "Typography",
